@@ -1,12 +1,15 @@
-from function_class import word_is_palindrome
-from unittest import TestCase
-def test_that_word_is_palindrome(self):
-   
-        is_palindrome= word_is_palindrome()
-        print(is_palindrome)
-        self.assertTrue(is_palindrome)
+import unittest
+from palindrome import is_prime_and_palindrome  
 
-    def test_word_is_not_palindrome(self):
+class TestPrimeAndPalindrome(unittest.TestCase):
 
-        is_palindrome = word_is_palindrome()
-        self.assertFalse(is_palindrome)
+    def test_prime_and_palindrome(self):
+        self.assertTrue(is_prime_and_palindrome(131))  
+
+    def test_not_prime(self):
+        self.assertFalse(is_prime_and_palindrome(121))  
+
+    def test_not_palindrome(self):
+        self.assertFalse(is_prime_and_palindrome(13))   
+
+    
